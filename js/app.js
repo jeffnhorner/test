@@ -1,4 +1,4 @@
-angular.module("test", ["ui-routher]")
+angular.module("test", ["ui-routher"])
 
 //state provider is essetnailly a state/pages for each page
 .config(function($stateProvider, $urlRouterProvider){
@@ -11,19 +11,19 @@ $stateProvider
     //url you type into browers
     url: '/',
     //where the browser pulls your page (file) from
-    templateUrl: './views/home.html',
-    // controller: 'mainCtrl'
+    templateUrl: '../index.html',
+    controller: 'mainCtrl'
   })
-  .state("about"), {
+  .state("about", {
     url:"/about",
     templateUrl: "views/about.html",
     // controller: "mainCtrl"
-  }
-  .state("contact"), {
+  })
+  .state("contact", {
     url:"/contact",
     templateUrl: "views/contact.html",
     // controller: "mainCtrl"
-  }
+  })
 
 
 
